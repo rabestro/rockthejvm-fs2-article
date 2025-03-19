@@ -2,7 +2,7 @@ import Actors.jlActors
 import cats.effect.{ExitCode, IO, IOApp}
 import fs2.Stream
 
-object MainSample2 extends IOApp {
+object MainSample3A extends IOApp {
   val savedJlActors: Stream[IO, Int] =
     jlActors.evalMap(ActorRepository.save)
 
