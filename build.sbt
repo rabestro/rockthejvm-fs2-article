@@ -7,7 +7,5 @@ lazy val root = (project in file("."))
     name := "rockthejvm-fs2-article"
   )
 
-libraryDependencies ++= Seq(
-  "co.fs2"        %% "fs2-core"         % "3.11.0",
-  "org.scalatest" %% "scalatest"        % "3.2.19" % Test,
-)
+libraryDependencies += "co.fs2" %% "fs2-core" % "3.11.0"
+
