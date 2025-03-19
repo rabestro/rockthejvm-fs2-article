@@ -1,3 +1,4 @@
+import Actors.{avengersActors, jlActors}
 import Data._
 import Model.Actor
 import cats.effect.IO
@@ -8,25 +9,6 @@ import fs2.{Chunk, Pipe, Pure, Stream}
  *
  * @see https://rockthejvm.com/articles/fs2-more-than-functional-streaming-in-scala#transforming-a-stream
  */
-
-val jlActors: Stream[Pure, Actor] = Stream(
-  henryCavil,
-  galGodot,
-  ezraMiller,
-  benFisher,
-  rayHardy,
-  jasonMomoa
-)
-
-// create a stream directly through the Stream.chunk method
-val avengersActors: Stream[Pure, Actor] = Stream.chunk(Chunk.array(Array(
-  scarlettJohansson,
-  robertDowneyJr,
-  chrisEvans,
-  markRuffalo,
-  chrisHemsworth,
-  jeremyRenner
-)))
 
 // create a stream containing all the actors whose hero belongs from the Justice League or the Avengers
 val dcAndMarvelSuperheroes: Stream[Pure, Actor] = jlActors ++ avengersActors

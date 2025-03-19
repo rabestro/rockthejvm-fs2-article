@@ -1,17 +1,9 @@
+import Actors.jlActors
 import Data._
 import Model.Actor
 import cats.MonadThrow
 import cats.effect.{ExitCode, IO, IOApp}
 import fs2.{Chunk, Pure, Stream}
-
-val jlActors: Stream[Pure, Actor] = Stream(
-  henryCavil,
-  galGodot,
-  ezraMiller,
-  benFisher,
-  rayHardy,
-  jasonMomoa
-)
 
 val tomHollandStream: Stream[Pure, Actor] = Stream.emit(tomHolland)
 
