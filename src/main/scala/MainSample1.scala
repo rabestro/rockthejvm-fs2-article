@@ -2,7 +2,7 @@ import Data.tomHolland
 import cats.effect.{ExitCode, IO, IOApp}
 import fs2.Stream
 
-object Fs2Tutorial extends IOApp {
+object MainSample1 extends IOApp {
   // persist an actor through a stream:
   val savingTomHolland: Stream[IO, Unit] = Stream.eval {
     IO {
